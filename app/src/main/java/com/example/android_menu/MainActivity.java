@@ -37,15 +37,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAnchorView(R.id.fab)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
@@ -65,7 +56,15 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("H");
         //noinspection SimplifiableIfStatement
         if (id == R.id.item1) {
-            Toast.makeText(getApplicationContext(),"Blog",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"This is Item 1",Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        if (id == R.id.item21) {
+            Toast.makeText(getApplicationContext(),"Item 2.1 is click",Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        if (id == R.id.item22) {
+            Toast.makeText(getApplicationContext(),"Item 2.2 is click",Toast.LENGTH_SHORT).show();
             return true;
         }
 
